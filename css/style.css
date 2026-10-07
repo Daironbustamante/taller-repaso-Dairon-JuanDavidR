@@ -1,7 +1,8 @@
 :root {
-    --color-primario: #FF5A5F;
-    --color-oscuro: #222222;
-    --color-claro: #F7F7F7;
+    --color-primario: red;
+    --color-secundario: blue;
+    --color-oscuro: #080807;
+    --color-claro: #fcfcfc;
     --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -18,12 +19,13 @@
     align-items: center; 
     padding: 20px 50px;
     background-color: var(--color-oscuro);
-    color: greenyellow;
+    color: #e3e9e3;
     font-weight: bold;
 }
 
+
 .navbar a {
-    color: white;
+    color: #e3e9e3;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
@@ -34,7 +36,7 @@
 }
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/hero-bd.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('../img/hero-bd.jpg');
     background-size: cover;
     background-position: center;
     height: 80vh; 
@@ -43,7 +45,12 @@
     align-items: center; 
     text-align: center;
     color: white;
+    padding: 10px;
+    position:relative;
+    box-shadow: 0 2px 20px rgb(168, 17, 17);
+    transition: 0.5s;
 }
+
 
 .hero h1 {
     font-size: 3rem;
@@ -57,7 +64,7 @@
 
 .btn-primary {
     background-color: var(--color-primario);
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 15px 30px;
     font-size: 1rem;
@@ -65,16 +72,34 @@
     cursor: pointer;
 }
 
+
 .servicios {
     padding: 60px 50px;
-    background-color: var(--color-claro);
+    background-color: var(--color-oscuro);
     text-align: center;
 }
 
 .servicios h2 {
-    margin-bottom: 40px;
-    color: var(--color-oscuro);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+
+    color:rgb(255, 253, 253);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(168, 17, 17);
+    margin: 20px 0;
+    transition: 0.5s;
 }
+
+.servicios h2:hover {
+    transform: translateY(-10px);
+    border-color: green;
+    padding:5px;
+    box-shadow: 0 4px 8px blue;
+    margin:20px 0;
+}
+
 
 .grid-servicios {
     display: grid;
@@ -86,10 +111,21 @@
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: rgb(24, 24, 24);
+    color:rgb(255, 253, 253);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgb(168, 17, 17);
+    margin: 25px 0;
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: green;
+    padding:30px;
+    box-shadow: 0 4px 8px blue;
+    margin:25px 0;
 }
 
 /* Imagen normal de la tarjeta */
