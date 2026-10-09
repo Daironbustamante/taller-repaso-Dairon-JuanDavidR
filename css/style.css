@@ -1,3 +1,8 @@
+
+/* ==========================================
+   VARIABLES GLOBALES
+========================================== */
+
 :root {
     --color-primario: red;
     --color-secundario: blue;
@@ -6,6 +11,10 @@
     --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,44 +22,86 @@
     font-family: var(--fuente-principal);
 }
 
+body {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* ==========================================
+   CABECERA Y NAVEGACIÓN
+========================================== */
+
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     padding: 20px 50px;
     background-color: var(--color-oscuro);
     color: #e3e9e3;
     font-weight: bold;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
-
 
 .navbar a {
     color: #e3e9e3;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
     color: var(--color-primario);
 }
 
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('../img/hero-bd.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 80vh; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
+/* ==========================================
+   BOTÓN PARA CAMBIAR EL TEMA
+========================================== */
+
+.btn-tema {
+    background-color: #222222;
     color: white;
-    padding: 10px;
-    position:relative;
-    box-shadow: 0 2px 20px rgb(168, 17, 17);
-    transition: 0.5s;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
 }
 
+.btn-tema:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   PORTADA PRINCIPAL (HERO)
+========================================== */
+
+.hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../img/hero-bd.jpg');
+
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    padding: 10px;
+    position: relative;
+
+    box-shadow: 0 2px 20px rgb(168, 17, 17);
+
+    transition: box-shadow 0.5s ease;
+}
 
 .hero h1 {
     font-size: 3rem;
@@ -62,21 +113,40 @@
     margin-bottom: 20px;
 }
 
+.texto-resaltado {
+    font-weight: bold;
+}
+
+/* ==========================================
+   BOTÓN PRINCIPAL
+========================================== */
+
 .btn-primary {
     background-color: var(--color-primario);
-    color: rgb(255, 255, 255);
+    color: white;
     border: none;
     padding: 15px 30px;
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
 }
 
+.btn-primary:hover {
+    transform: scale(1.05);
+    background-color: #cc0000;
+}
+
+/* ==========================================
+   SECCIÓN DE PROYECTOS
+========================================== */
 
 .servicios {
     padding: 60px 50px;
     background-color: var(--color-oscuro);
     text-align: center;
+    transition: background-color 0.5s ease;
 }
 
 .servicios h2 {
@@ -84,73 +154,95 @@
     display: inline-block;
     z-index: 1;
 
-    color:rgb(255, 253, 253);
+    color: rgb(255, 253, 253);
     padding: 5px;
     border-radius: 10px;
+
     box-shadow: 0 4px 8px rgb(168, 17, 17);
+
     margin: 20px 0;
-    transition: 0.5s;
+    transition: box-shadow 0.5s ease,
+                transform 0.5s ease,
+                color 0.5s ease;
 }
 
 .servicios h2:hover {
     transform: translateY(-10px);
-    padding:5px;
     box-shadow: 0 4px 8px blue;
-    margin:20px 0;
 }
 
+/* ==========================================
+   CUADRÍCULA DE PROYECTOS
+========================================== */
 
 .grid-servicios {
     display: grid;
 
-    /* Crea columnas responsivas automáticamente */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    );
 
     gap: 30px;
 }
 
+/* ==========================================
+   TARJETAS
+========================================== */
+
 .card {
     background: rgb(24, 24, 24);
-    color:rgb(255, 253, 253);
+    color: rgb(255, 253, 253);
+
     padding: 30px;
     border-radius: 15px;
+
     box-shadow: 0 4px 8px red;
+
     margin: 25px 0;
-    transition: 0.5s;
+
+    transition: box-shadow 0.5s ease,
+                transform 0.5s ease,
+                background-color 0.5s ease,
+                color 0.5s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    padding:30px;
     box-shadow: 0 4px 8px blue;
-    margin:25px 0;
 }
 
-/* Imagen normal de la tarjeta */
+/* ==========================================
+   IMÁGENES DE LAS TARJETAS
+========================================== */
+
 .card > label > img,
 .card > img {
     width: 100%;
     height: 200px;
+
     object-fit: cover;
+
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
-/* ================================= */
-/* VISOR DE IMAGEN COMPLETA          */
-/* ================================= */
-
-/* Ocultamos el checkbox */
-#imagen-proyecto1 {
-    display: none;
-}
-
-/* Cursor de la imagen */
 .card > label {
     cursor: pointer;
 }
 
-/* Fondo negro que cubre toda la pantalla */
+/* ==========================================
+   VISOR DE IMAGEN COMPLETA
+========================================== */
+
+/* Checkbox oculto */
+
+#imagen-proyecto1 {
+    display: none;
+}
+
+/* Fondo que cubre toda la pantalla */
+
 .imagen-grande {
     display: none;
 
@@ -169,12 +261,14 @@
     z-index: 1000;
 }
 
-/* Mostrar la imagen cuando se activa el checkbox */
+/* Mostrar el visor al activar el checkbox */
+
 #imagen-proyecto1:checked ~ .imagen-grande {
     display: flex;
 }
 
-/* Imagen COMPLETA */
+/* Imagen ampliada */
+
 .imagen-grande img {
     width: auto;
     height: auto;
@@ -183,6 +277,79 @@
     max-height: 95vh;
 
     object-fit: contain;
+
     border-radius: 5px;
     margin: 0;
+}
+
+/* ==========================================
+   MODO CLARO
+========================================== */
+
+body.tema-claro {
+    background-color: #f4f4f4;
+    color: #171717;
+}
+
+/* Cabecera clara */
+
+body.tema-claro .header {
+    background-color: #ffffff;
+    color: #171717;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+body.tema-claro .navbar a {
+    color: #171717;
+}
+
+body.tema-claro .navbar a:hover {
+    color: var(--color-primario);
+}
+
+/* Botón en modo claro */
+
+body.tema-claro .btn-tema {
+    background-color: #eeeeee;
+    color: #171717;
+    border-color: #bbbbbb;
+}
+
+/* Fondo de las secciones */
+
+body.tema-claro .servicios {
+    background-color: #f4f4f4;
+}
+
+/* Título de proyectos */
+
+body.tema-claro .servicios h2 {
+    color: #171717;
+    box-shadow: 0 4px 8px rgba(168, 17, 17, 0.35);
+}
+
+body.tema-claro .servicios h2:hover {
+    box-shadow: 0 4px 8px blue;
+}
+
+/* Tarjetas claras */
+
+body.tema-claro .card {
+    background-color: #ffffff;
+    color: #171717;
+
+    border: 1px solid #dddddd;
+
+    box-shadow: 0 4px 8px rgba(168, 17, 17, 0.25);
+}
+
+body.tema-claro .card:hover {
+    box-shadow: 0 4px 8px blue;
+}
+
+/* La portada conserva su imagen y texto blanco */
+
+body.tema-claro .hero {
+    color: white;
 }

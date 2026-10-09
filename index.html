@@ -15,6 +15,9 @@
             <a href="#destinos">Proyectos</a>
             <a href="#contacto">Acerca de Mí</a>
         </nav>
+        <div class="controles-usuario">
+              <button id="btn-toggle-tema" class="btn-tema">☀️ Modo claro</button>
+        </div>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -24,6 +27,9 @@
         <section id="inicio" class="hero">
             <div class="hero-content">
                 <h1>Portafolio Dairon</h1>
+                <h1>Bienvenido a mi Portafolio</h1> 
+                <!-- Contenedor vacío donde JS inyectará el saludo según la hora --> 
+                <p id="saludo-tiempo-real" class="texto-resaltado"></p>
                 <p>Explora mis proyectos y habilidades en desarrollo web.</p>
                 <button class="btn-primary">Ver proyectos</button>
             </div>
@@ -79,8 +85,7 @@
                      </p>
             </article>
         </section>
-    </main>
-    <!-- Esta línea debe ser la última antes del </body> --> 2 
-     <script src="js/app.js" defer></script>
+    </main> 
+    <script src="js/app.js" defer></script>
 </body>
 </html>
