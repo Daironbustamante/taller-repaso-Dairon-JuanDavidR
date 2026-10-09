@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- CABECERA: Contiene logo y menú -->
+    <header class="header">
+        <div class="logo">Mi Portafolio</div>
+        <nav class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#destinos">Proyectos</a>
+            <a href="#contacto">Acerca de Mí</a>
+        </nav>
+        <div class="controles-usuario">
+              <button id="btn-toggle-tema" class="btn-tema">☀️ Modo claro</button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- SECCIÓN 1: Hero (La portada de impacto) -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Portafolio Dairon</h1>
+                <h1>Bienvenido a mi Portafolio</h1> 
+                <!-- Contenedor vacío donde JS inyectará el saludo según la hora --> 
+                <p id="saludo-tiempo-real" class="texto-resaltado"></p>
+                <p>Explora mis proyectos y habilidades en desarrollo web.</p>
+                <button class="btn-primary">Ver proyectos</button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: Servicios (Uso de Grid) -->
+        <section id="destinos" class="servicios">
+            <h2>Proyectos</h2>
+
+            <div class="grid-servicios">
+
+                <article class="card">
+
+                    <!-- Checkbox oculto -->
+                    <input type="checkbox" id="imagen-proyecto1">
+
+                    <!-- Imagen del proyecto -->
+                    <label for="imagen-proyecto1">
+                        <img src="img/proyecto1.png" alt="Organización de equipaje">
+                    </label>
+
+                    <h3>Proyecto 1</h3>
+                    <p>Creé una pagina de un safari que se realizó en el pueblo y participé en el. Mostrando algunas de las diferentes actividades que se realizaron.</p>
+                    <div class="imagen-grande">
+                        <label for="imagen-proyecto1">
+                            <img src="img/proyecto1.png" alt="Proyecto 1 completo">
+                        </label>
+                    </div>
+
+                </article>
+
+                <article class="card">
+                    <img src="img/proyecto2.png" alt="Proyecto 2">
+                    <h3>Proyecto 2</h3>
+                    <p>Es esta misma pagina. Decidi agregar esta porque los demas trabajos que tenia se perdieron.</p>
+                </article>
+
+                <article class="card">
+                    <img src="img/proyecto3.png" alt="Proyecto 3">
+                    <h3>Proyecto 3</h3>
+                    <p>En este proyecto. Se hizo una pagina de periodico en Wordpress acerca del calentamiento global y el medio ambiente. <br>
+                       (Se ve mal porque trabajar con Wordpress se me dificulta aun).</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contacto" class="servicios">
+            <article class="card">
+                <h1>Acerca de Mi</h1>
+                <p>Soy un joven estudiante de programacion apasionado por la programacion web, la ciberseguridad y el hardware de los computadores. <br>
+                    Me interesa mucho aprender a programar y pienso continuar estudiando programacion web.
+                     </p>
+            </article>
+        </section>
+    </main> 
+    <script src="js/app.js" defer></script>
+</body>
+</html>
