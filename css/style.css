@@ -94,7 +94,6 @@
 
 .servicios h2:hover {
     transform: translateY(-10px);
-    border-color: green;
     padding:5px;
     box-shadow: 0 4px 8px blue;
     margin:20px 0;
@@ -115,14 +114,13 @@
     color:rgb(255, 253, 253);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgb(168, 17, 17);
+    box-shadow: 0 4px 8px red;
     margin: 25px 0;
     transition: 0.5s;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    border-color: green;
     padding:30px;
     box-shadow: 0 4px 8px blue;
     margin:25px 0;
