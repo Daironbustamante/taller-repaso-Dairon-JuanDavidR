@@ -15,28 +15,32 @@
             <a href="#destinos">Proyectos</a>
             <a href="#contacto">Acerca de Mí</a>
         </nav>
+        <!-- BOTÓN DE TEMA AGREGADO -->
+        <div class="controles-usuario">
+            <button id="btn-toggle-tema" class="btn-tema">🌙 Oscuro</button>
+        </div>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
 
-        <!-- SECCIÓN 1: Hero (La portada de impacto) -->
+        <!-- SECCIÓN 1: Hero -->
         <section id="inicio" class="hero">
             <div class="hero-content">
                 <h1>Portafolio Dairon</h1>
-                <p>Explora mis proyectos y habilidades en desarrollo web.</p>
+                <!-- Párrafo para el saludo dinámico por JS -->
+                <p id="saludo-tiempo-real">Explora mis proyectos y habilidades en desarrollo web.</p>
                 <button class="btn-primary">Ver proyectos</button>
             </div>
         </section>
 
-        <!-- SECCIÓN 2: Servicios (Uso de Grid) -->
+        <!-- SECCIÓN 2: Servicios -->
         <section id="destinos" class="servicios">
             <h2>Proyectos</h2>
 
             <div class="grid-servicios">
 
                 <article class="card">
-
                     <!-- Checkbox oculto -->
                     <input type="checkbox" id="imagen-proyecto1">
 
@@ -46,26 +50,25 @@
                     </label>
 
                     <h3>Proyecto 1</h3>
-                    <p>Creé una pagina de un safari que se realizó en el pueblo y participé en el. Mostrando algunas de las diferentes actividades que se realizaron.</p>
+                    <p>Creé una página de un safari que se realizó en el pueblo y participé en él, mostrando algunas de las diferentes actividades que se realizaron.</p>
                     <div class="imagen-grande">
                         <label for="imagen-proyecto1">
                             <img src="img/proyecto1.png" alt="Proyecto 1 completo">
                         </label>
                     </div>
-
                 </article>
 
                 <article class="card">
                     <img src="img/proyecto2.png" alt="Proyecto 2">
                     <h3>Proyecto 2</h3>
-                    <p>Es esta misma pagina. Decidi agregar esta porque los demas trabajos que tenia se perdieron.</p>
+                    <p>Es esta misma página. Decidí agregar esta porque los demás trabajos que tenía se perdieron.</p>
                 </article>
 
                 <article class="card">
                     <img src="img/proyecto3.png" alt="Proyecto 3">
                     <h3>Proyecto 3</h3>
-                    <p>En este proyecto. Se hizo una pagina de periodico en Wordpress acerca del calentamiento global y el medio ambiente. <br>
-                       (Se ve mal porque trabajar con Wordpress se me dificulta aun).</p>
+                    <p>En este proyecto se hizo una página de periódico en WordPress acerca del calentamiento global y el medio ambiente.<br>
+                       (Se ve mal porque trabajar con WordPress se me dificulta aún).</p>
                 </article>
 
             </div>
@@ -73,13 +76,14 @@
 
         <section id="contacto" class="servicios">
             <article class="card">
-                <h1>Acerca de Mi</h1>
-                <p>Soy un joven estudiante de programacion apasionado por la programacion web, la ciberseguridad y el hardware de los computadores. <br>
-                    Me interesa mucho aprender a programar y pienso continuar estudiando programacion web.
-                     </p>
+                <h1>Acerca de Mí</h1>
+                <p>Soy un joven estudiante de programación apasionado por la programación web, la ciberseguridad y el hardware de los computadores.<br>
+                   Me interesa mucho aprender a programar y pienso continuar estudiando programación web.</p>
             </article>
         </section>
     </main>
-    
+
+    <!-- JS VINCULADO AL FINAL -->
+    <script src="js/app.js" defer></script>
 </body>
 </html>
